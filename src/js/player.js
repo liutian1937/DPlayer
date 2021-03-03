@@ -119,7 +119,7 @@ class DPlayer {
             this.setting = new Setting(this);
         }
 
-        if (this.options.showSpeed) {
+        if (!this.options.forbidSpeed) {
             this.speeds = new Speed(this);
         }
         

@@ -18,12 +18,18 @@ class HotKey {
                                 if (player.options.live) {
                                     break;
                                 }
+                                if (player.options.forbidDrag) {
+                                    break;
+                                }
                                 player.seek(player.video.currentTime - 5);
                                 player.controller.setAutoHide();
                                 break;
                             case 39:
                                 event.preventDefault();
                                 if (player.options.live) {
+                                    break;
+                                }
+                                if (player.options.forbidDrag) {
                                     break;
                                 }
                                 player.seek(player.video.currentTime + 5);

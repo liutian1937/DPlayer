@@ -121,6 +121,9 @@ class Controller {
         };
 
         this.player.template.playedBarWrap.addEventListener(utils.nameMap.dragStart, () => {
+            if(this.player.options.forbidDrag) {
+                return false;
+            }
             this.player.timer.disable('progress');
             document.addEventListener(utils.nameMap.dragMove, thumbMove);
             document.addEventListener(utils.nameMap.dragEnd, thumbUp);

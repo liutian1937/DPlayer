@@ -99,7 +99,7 @@
     </div>
     <div class="dplayer-icons dplayer-icons-right">
 
-        {{ if options.showSpeed }}
+        {{ if !options.forbidSpeed }}
         <div class="dplayer-speed">
             <button class="dplayer-icon dplayer-speed-icon" data-balloon="{{ tran('Speed') }}" data-balloon-pos="up">
                 <span class="dplayer-icon-content">正常</span>

@@ -147,7 +147,7 @@ function initPlayers() {
 
     // dp3
     window.dp3 = new DPlayer({
-        showSpeed: true,
+        forbidSpeed: false,
         showSetting: true,
         container: document.getElementById('dplayer3'),
         preload: 'none',
