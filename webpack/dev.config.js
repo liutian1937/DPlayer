@@ -72,11 +72,19 @@ module.exports = {
             },
             {
                 test: /\.svg$/,
-                loader: 'svg-inline-loader',
+                use: [
+                    {
+                        loader: 'svg-inline-loader'
+                    }
+                ]
             },
             {
                 test: /\.art$/,
-                loader: 'art-template-loader',
+                use: [
+                    {
+                        loader: 'art-template-loader'
+                    }
+                ]
             },
         ],
     },

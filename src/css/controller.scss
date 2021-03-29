@@ -335,7 +335,7 @@
                 color: #fff;
                 width: auto;
                 line-height: 22px;
-                font-size: 12px;
+                font-size: 14px;
             }
             &.dplayer-comment-icon {
                 padding: 10px 9px 9px;
@@ -538,25 +538,30 @@
             position: relative;
             display: inline-block;
             height: 100%;
-            z-index: 2;
-            &:hover {
-                .dplayer-quality-list {
-                    display: block;
-                }
-                .dplayer-quality-mask {
-                    display: block;
-                }
-            }
+            // &:hover {
+            //     .dplayer-quality-list {
+            //         display: block;
+            //     }
+            //     .dplayer-quality-mask {
+            //         display: block;
+            //     }
+            // }
             .dplayer-quality-mask {
-                display: none;
                 position: absolute;
                 bottom: 38px;
                 left: -18px;
                 width: 80px;
                 padding-bottom: 12px;
+
+                transition: all .3s ease-in-out;
+                z-index: 2;
+                transform: scale(0);
+               
+                &.dplayer-quality-mask-open {
+                    transform: scale(1);
+                }
             }
             .dplayer-quality-list {
-                display: none;
                 font-size: 12px;
                 width: 80px;
                 border-radius: 2px;
@@ -591,7 +596,7 @@
                 width: 50px;
                 // background-color: #aaa;
                 text-align: center;
-                font-size: 12px;
+                font-size: 14px;
                 padding: 0;
                 line-height: 22px;
                 border: none;

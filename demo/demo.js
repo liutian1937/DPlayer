@@ -147,15 +147,16 @@ function initPlayers() {
 
     // dp3
     window.dp3 = new DPlayer({
+        forbidDrag: true,
         forbidSpeed: false,
-        showSetting: true,
+        showSetting: false,
         container: document.getElementById('dplayer3'),
         preload: 'none',
         video: {
             quality: [{
                 name: 'HD',
-                url: 'https://s-sh-17-dplayercdn.oss.dogecdn.com/hikarunara.m3u8',
-                type: 'hls'
+                url: 'https://api.dogecloud.com/player/get.mp4?vcode=5ac682e6f8231991&userId=17&ext=.mp4',
+                type: 'normal'
             }, {
                 name: 'SD',
                 url: 'https://api.dogecloud.com/player/get.mp4?vcode=5ac682e6f8231991&userId=17&ext=.mp4',

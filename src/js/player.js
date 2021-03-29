@@ -16,6 +16,7 @@ import Bezel from './bezel';
 import Controller from './controller';
 import Setting from './setting';
 import Speed from './speed';
+import Quality from './quality';
 import Comment from './comment';
 import HotKey from './hotkey';
 import ContextMenu from './contextmenu';
@@ -123,6 +124,11 @@ class DPlayer {
             this.speeds = new Speed(this);
         }
         
+
+        if (this.options.video.quality) {
+            this.qualitys = new Quality(this);
+        }
+
         this.plugins = {};
 
         document.addEventListener(
@@ -487,7 +493,7 @@ class DPlayer {
         // video end
         this.on('ended', () => {
             this.bar.set('played', 1, 'width');
-            if (!this.setting.loop) {
+            if (!this.setting || !this.setting.loop) {
                 this.pause();
             } else {
                 this.seek(0);

@@ -218,13 +218,13 @@ class Controller {
     }
 
     initQualityButton() {
-        if (this.player.options.video.quality) {
-            this.player.template.qualityList.addEventListener('click', (e) => {
-                if (e.target.classList.contains('dplayer-quality-item')) {
-                    this.player.switchQuality(e.target.dataset.index);
-                }
-            });
-        }
+        // if (this.player.options.video.quality) {
+        //     this.player.template.qualityList.addEventListener('click', (e) => {
+        //         if (e.target.classList.contains('dplayer-quality-item')) {
+        //             this.player.switchQuality(e.target.dataset.index);
+        //         }
+        //     });
+        // }
     }
 
     initScreenshotButton() {
@@ -317,7 +317,7 @@ class Controller {
 
     hide() {
         this.player.container.classList.add('dplayer-hide-controller');
-        this.player.setting.hide();
+        this.player.setting && this.player.setting.hide();
         this.player.comment && this.player.comment.hide();
     }
 
